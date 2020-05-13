@@ -1,6 +1,6 @@
 from stix2 import TAXIICollectionSource, Filter, Bundle
 from taxii2client.v20 import Collection
-
+import os
 collection = Collection("https://cti-taxii.mitre.org/stix/collections/95ecc380-afe9-11e4-9b6c-751b66dd541e/")
 
 # Supply the collection to TAXIICollection
@@ -85,6 +85,10 @@ class Attack:
             self.find_relationships(obj)
 
         bundle = Bundle(self.searched_objs)
+        if not os.path.isfile('./bundles/{0}-bundle.json'.format(target_group)):
+            with open('./bundles/{0}-bundle.json'.format(target_group), 'w') as f:
+                f.write(bundle.serialize())
+
         return bundle.serialize()
 
 
