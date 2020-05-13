@@ -77,7 +77,6 @@ class Attack:
                     self.find_relationships(obj)
 
 
-
     def get_bundle_json(self, target_group):
         objects = self.find_groups(target_group)
 
