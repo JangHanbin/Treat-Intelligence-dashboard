@@ -2,7 +2,7 @@ from flask import Flask,jsonify,abort,make_response,json, render_template, reque
 from flask_bootstrap import Bootstrap
 from flask_wtf import Form as BaseForm
 from wtforms import TextField, SubmitField, TextAreaField
-from wtforms.validators import Length, Email, Required
+from wtforms.validators import Length, Email, DataRequired,EqualTo
 from flask_wtf.csrf import CSRFProtect
 # from attack_search import Attack
 
@@ -15,7 +15,7 @@ Bootstrap(app)
 csrf = CSRFProtect(app)
 
 class JsonForm(BaseForm):
-    textArea = TextAreaField('Result', render_kw={'readonly': True, 'id':'result', 'style':'height: 800px;'})
+    textArea = TextAreaField('Object json', validators=[Length(min=1,message='HEY!')] ,render_kw={'readonly': True, 'id':'result', 'style':'height: 800px;', 'placeholder':'Related object will present here.'})
 
 
 
