@@ -3,3 +3,4 @@ grouping/
 .idea/
 .DS_Store
 *.bak
+venv/
