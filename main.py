@@ -94,6 +94,7 @@ def killchain():
     return 'killchain'
 
 if __name__=='__main__':
+
     app.config.from_object(__name__)
     app.config['SECRET_KEY'] = 'tnarudhkTejsskdml~'
     app.run('0.0.0.0',port=1994, debug=True)

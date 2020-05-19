@@ -88,7 +88,7 @@ class Attack:
             with open('./bundles/{0}-bundle.json'.format(target_group), 'w') as f:
                 f.write(bundle.serialize())
 
-        return bundle.serialize()
+        return bundle
 
 
 
