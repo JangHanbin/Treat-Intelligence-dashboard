@@ -1,0 +1,298 @@
+{
+    "type": "bundle",
+    "id": "bundle--df7bdd30-55da-48a3-8a45-afe0c28dd3fb",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--25ad5783-c7fe-4715-b4ce-c03b36ccdfa8",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-12-14T16:46:06.044Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "relationship_type": "uses",
+            "description": "[BLACKCOFFEE](https://attack.mitre.org/software/S0069) uses Microsoft\u2019s TechNet Web portal to obtain an encoded tag containing the IP address of a command and control server and then communicates separately with that IP address for C2. If the C2 server is discovered or shut down, the threat actors can update the encoded IP address on TechNet to maintain control of the victims\u2019 machines.",
+            "source_ref": "malware--d69c8146-ab35-4d50-8382-6fc80e641d43",
+            "target_ref": "attack-pattern--84e02621-8fdf-470f-bd58-993bb6a89d91",
+            "external_references": [
+                {
+                    "source_name": "FireEye APT17",
+                    "description": "FireEye Labs/FireEye Threat Intelligence. (2015, May 14). Hiding in Plain Sight: FireEye and Microsoft Expose Obfuscation Tactic. Retrieved January 22, 2016.",
+                    "url": "https://www2.fireeye.com/rs/fireye/images/APT17_Report.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3a348ba8-5608-4e9b-a180-f66cfad9896e",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-06-21T14:45:42.420Z",
+            "modified": "2019-06-21T14:45:42.420Z",
+            "relationship_type": "mitigates",
+            "description": "Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level.",
+            "source_ref": "course-of-action--12241367-a8b7-49b4-b86e-2236901ba50c",
+            "target_ref": "attack-pattern--84e02621-8fdf-470f-bd58-993bb6a89d91",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d4f7fac4-ddc0-40fa-8b16-c61b1de30072",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-05-10T18:57:53.099Z",
+            "modified": "2019-05-10T18:57:53.099Z",
+            "relationship_type": "uses",
+            "description": "After initial compromise, [Chaos](https://attack.mitre.org/software/S0220) will download a second stage to establish a more permanent presence on the affected system.",
+            "source_ref": "malware--5bcd5511-6756-4824-a692-e8bb109364af",
+            "target_ref": "attack-pattern--84e02621-8fdf-470f-bd58-993bb6a89d91",
+            "external_references": [
+                {
+                    "source_name": "Chaos Stolen Backdoor",
+                    "description": "Sebastian Feldmann. (2018, February 14). Chaos: a Stolen Backdoor Rising Again. Retrieved March 5, 2018.",
+                    "url": "http://gosecure.net/2018/02/14/chaos-stolen-backdoor-rising/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a6962782-1942-42f5-a627-f205376e2ec2",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-12-14T16:46:06.044Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "relationship_type": "uses",
+            "description": "[BACKSPACE](https://attack.mitre.org/software/S0031) attempts to avoid detection by checking a first stage command and control server to determine if it should connect to the second stage server, which performs \"louder\" interactions with the malware.",
+            "source_ref": "malware--fb261c56-b80e-43a9-8351-c84081e7213d",
+            "target_ref": "attack-pattern--84e02621-8fdf-470f-bd58-993bb6a89d91",
+            "external_references": [
+                {
+                    "source_name": "FireEye APT30",
+                    "description": "FireEye Labs. (2015, April). APT30 AND THE MECHANICS OF A LONG-RUNNING CYBER ESPIONAGE OPERATION. Retrieved May 1, 2015.",
+                    "url": "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--389854e8-32d1-406c-ab58-2ee2918bf7ed",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:33:27.028Z",
+            "modified": "2019-07-25T11:14:24.285Z",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--514e7371-a344-4de7-8ec3-3aa42b801d52",
+            "target_ref": "attack-pattern--84e02621-8fdf-470f-bd58-993bb6a89d91",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--d69c8146-ab35-4d50-8382-6fc80e641d43",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:32:45.892Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "name": "BLACKCOFFEE",
+            "description": "[BLACKCOFFEE](https://attack.mitre.org/software/S0069) is malware that has been used by several Chinese groups since at least 2013. (Citation: FireEye APT17) (Citation: FireEye Periscope March 2018)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0069",
+                    "external_id": "S0069"
+                },
+                {
+                    "source_name": "BLACKCOFFEE",
+                    "description": "(Citation: FireEye APT17) (Citation: FireEye Periscope March 2018)"
+                },
+                {
+                    "source_name": "FireEye APT17",
+                    "description": "FireEye Labs/FireEye Threat Intelligence. (2015, May 14). Hiding in Plain Sight: FireEye and Microsoft Expose Obfuscation Tactic. Retrieved January 22, 2016.",
+                    "url": "https://www2.fireeye.com/rs/fireye/images/APT17_Report.pdf"
+                },
+                {
+                    "source_name": "FireEye Periscope March 2018",
+                    "description": "FireEye. (2018, March 16). Suspected Chinese Cyber Espionage Group (TEMP.Periscope) Targeting U.S. Engineering and Maritime Industries. Retrieved April 11, 2018.",
+                    "url": "https://www.fireeye.com/blog/threat-research/2018/03/suspected-chinese-espionage-group-targeting-maritime-and-engineering-industries.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "BLACKCOFFEE"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--84e02621-8fdf-470f-bd58-993bb6a89d91",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:31:15.935Z",
+            "modified": "2019-06-21T14:45:42.314Z",
+            "name": "Multi-Stage Channels",
+            "description": "Adversaries may create multiple stages for command and control that are employed under different conditions or for certain functions. Use of multiple stages may obfuscate the command and control channel to make detection more difficult.\n\nRemote access tools will call back to the first-stage command and control server for instructions. The first stage may have automated capabilities to collect basic host information, update tools, and upload additional files. A second remote access tool (RAT) could be uploaded at that point to redirect the host to the second-stage command and control server. The second stage will likely be more fully featured and allow the adversary to interact with the system through a reverse shell and additional RAT features.\n\nThe different stages will likely be hosted separately with no overlapping infrastructure. The loader may also have backup first-stage callbacks or [Fallback Channels](https://attack.mitre.org/techniques/T1008) in case the original first-stage communication path is discovered and blocked.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1104",
+                    "external_id": "T1104"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_data_sources": [
+                "Netflow/Enclave netflow",
+                "Network device logs",
+                "Network protocol analysis",
+                "Packet capture",
+                "Process use of network"
+            ],
+            "x_mitre_detection": "Host data that can relate unknown or suspicious process activity using a network connection is important to supplement any existing indicators of compromise based on malware command and control signatures and infrastructure. Relating subsequent actions that may result from Discovery of the system and network information or Lateral Movement to the originating process may also yield useful data.",
+            "x_mitre_version": "1.0",
+            "x_mitre_network_requirements": true,
+            "x_mitre_platforms": [
+                "Linux",
+                "macOS",
+                "Windows"
+            ]
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--12241367-a8b7-49b4-b86e-2236901ba50c",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-06-10T20:46:02.263Z",
+            "modified": "2019-06-10T20:46:02.263Z",
+            "name": "Network Intrusion Prevention",
+            "description": "Use intrusion detection signatures to block traffic at network boundaries.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/mitigations/M1031",
+                    "external_id": "M1031"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "malware",
+            "id": "malware--5bcd5511-6756-4824-a692-e8bb109364af",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2018-04-18T17:59:24.739Z",
+            "modified": "2019-05-10T18:57:52.988Z",
+            "name": "Chaos",
+            "description": "[Chaos](https://attack.mitre.org/software/S0220) is Linux malware that compromises systems by brute force attacks against SSH services. Once installed, it provides a reverse shell to its controllers, triggered by unsolicited packets. (Citation: Chaos Stolen Backdoor)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0220",
+                    "external_id": "S0220"
+                },
+                {
+                    "source_name": "Chaos",
+                    "description": "(Citation: Chaos Stolen Backdoor)"
+                },
+                {
+                    "source_name": "Chaos Stolen Backdoor",
+                    "description": "Sebastian Feldmann. (2018, February 14). Chaos: a Stolen Backdoor Rising Again. Retrieved March 5, 2018.",
+                    "url": "http://gosecure.net/2018/02/14/chaos-stolen-backdoor-rising/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "Chaos"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "malware",
+            "id": "malware--fb261c56-b80e-43a9-8351-c84081e7213d",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:32:24.428Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "name": "BACKSPACE",
+            "description": "[BACKSPACE](https://attack.mitre.org/software/S0031) is a backdoor used by [APT30](https://attack.mitre.org/groups/G0013) that dates back to at least 2005. (Citation: FireEye APT30)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0031",
+                    "external_id": "S0031"
+                },
+                {
+                    "source_name": "FireEye APT30",
+                    "description": "FireEye Labs. (2015, April). APT30 AND THE MECHANICS OF A LONG-RUNNING CYBER ESPIONAGE OPERATION. Retrieved May 1, 2015.",
+                    "url": "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "BACKSPACE",
+                "Lecna"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--514e7371-a344-4de7-8ec3-3aa42b801d52",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2018-10-17T00:14:20.652Z",
+            "modified": "2019-07-25T11:14:24.192Z",
+            "name": "Multi-Stage Channels Mitigation",
+            "description": "Command and control infrastructure used in a multi-stage channel may be blocked if known ahead of time. If unique signatures are present in the C2 traffic, they could also be used as the basis of identifying and blocking the channel. (Citation: University of Birmingham C2)",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/mitigations/T1104",
+                    "external_id": "T1104"
+                },
+                {
+                    "source_name": "University of Birmingham C2",
+                    "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
+                    "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_deprecated": true,
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

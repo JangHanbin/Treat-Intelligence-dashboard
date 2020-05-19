@@ -1,0 +1,751 @@
+{
+    "type": "bundle",
+    "id": "bundle--d4323779-7006-4ce2-8b01-7ad3713666c2",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5a77e097-3aed-4bd3-b5fc-997746da62ad",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-12-14T16:46:06.044Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "relationship_type": "uses",
+            "description": "[BLACKCOFFEE](https://attack.mitre.org/software/S0069) has the capability to discover processes.",
+            "source_ref": "malware--d69c8146-ab35-4d50-8382-6fc80e641d43",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "FireEye APT17",
+                    "description": "FireEye Labs/FireEye Threat Intelligence. (2015, May 14). Hiding in Plain Sight: FireEye and Microsoft Expose Obfuscation Tactic. Retrieved January 22, 2016.",
+                    "url": "https://www2.fireeye.com/rs/fireye/images/APT17_Report.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--54a384e5-17c8-422d-b199-18e7945cb7d6",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-10-07T19:05:49.069Z",
+            "modified": "2019-10-07T19:05:49.069Z",
+            "relationship_type": "uses",
+            "description": "[BabyShark](https://attack.mitre.org/software/S0414) has executed the <code>tasklist</code> command.\t",
+            "source_ref": "malware--d1b7830a-fced-4be3-a99c-f495af9d9e1b",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "Unit42 BabyShark Feb 2019",
+                    "description": "Unit 42. (2019, February 22). New BabyShark Malware Targets U.S. National Security Think Tanks. Retrieved October 7, 2019.",
+                    "url": "https://unit42.paloaltonetworks.com/new-babyshark-malware-targets-u-s-national-security-think-tanks/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3029d06e-7a13-4d17-bad5-ce3198bce2ef",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-09-27T13:27:07.065Z",
+            "modified": "2019-10-14T19:21:25.512Z",
+            "relationship_type": "uses",
+            "description": "[Fysbis](https://attack.mitre.org/software/S0410) can collect information about running processes. ",
+            "source_ref": "malware--50d6688b-0985-4f3d-8cbe-0c796b30703b",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "Fysbis Dr Web Analysis",
+                    "description": "Doctor Web. (2014, November 21). Linux.BackDoor.Fysbis.1. Retrieved December 7, 2017.",
+                    "url": "https://vms.drweb.com/virus/?i=4276269"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--68d151ea-6dd8-4e6b-acd5-c998ebffc357",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-09-24T14:19:05.143Z",
+            "modified": "2019-10-14T22:06:29.416Z",
+            "relationship_type": "uses",
+            "description": "[ZxShell](https://attack.mitre.org/software/S0412) has a command, ps, to obtain a listing of processes on the system. ",
+            "source_ref": "malware--cfc75b0d-e579-40ae-ad07-a1ce00d49a6c",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "Talos ZxShell Oct 2014 ",
+                    "description": "Allievi, A., et al. (2014, October 28). Threat Spotlight: Group 72, Opening the ZxShell. Retrieved September 24, 2019.",
+                    "url": "https://blogs.cisco.com/security/talos/opening-zxshell"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--268d6aed-3961-42d9-9d34-785a9903d004",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-09-13T13:40:47.857Z",
+            "modified": "2019-09-13T17:14:47.670Z",
+            "relationship_type": "uses",
+            "description": "[Machete](https://attack.mitre.org/software/S0409) has a component to check for running processes to look for web browsers. ",
+            "source_ref": "malware--35cd1d01-1ede-44d2-b073-a264d727bc04",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "ESET Machete July 2019",
+                    "description": "ESET. (2019, July). MACHETE JUST GOT SHARPER Venezuelan government institutions under attack. Retrieved September 13, 2019.",
+                    "url": "https://www.welivesecurity.com/wp-content/uploads/2019/08/ESET_Machete.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ee565652-51c8-4fe8-bb05-682c6942485a",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-03-11T20:01:20.298Z",
+            "modified": "2019-06-24T17:15:45.385Z",
+            "relationship_type": "uses",
+            "description": "[Empire](https://attack.mitre.org/software/S0363) can find information about processes running on local and remote systems.",
+            "source_ref": "tool--3433a9e8-1c47-4320-b9bf-ed449061d1c3",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "Github PowerShell Empire",
+                    "description": "Schroeder, W., Warner, J., Nelson, M. (n.d.). Github PowerShellEmpire. Retrieved April 28, 2016.",
+                    "url": "https://github.com/PowerShellEmpire/Empire"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--fa2a7222-e9b1-4e97-82da-42a9c4014bdd",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2018-04-18T17:59:24.739Z",
+            "modified": "2019-04-24T17:52:47.727Z",
+            "relationship_type": "uses",
+            "description": "[Pupy](https://attack.mitre.org/software/S0192) can list the running processes and get the process ID and parent process\u2019s ID.",
+            "source_ref": "tool--cb69b20d-56d0-41ab-8440-4a4b251614d4",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "GitHub Pupy",
+                    "description": "Nicolas Verdier. (n.d.). Retrieved January 29, 2018.",
+                    "url": "https://github.com/n1nj4sec/pupy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--c1cbaa0f-59d2-4b49-a91f-c21bff7ca009",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2018-04-18T17:59:24.739Z",
+            "modified": "2019-04-24T23:43:08.037Z",
+            "relationship_type": "uses",
+            "description": "[PowerSploit](https://attack.mitre.org/software/S0194)'s <code>Get-ProcessTokenPrivilege</code> Privesc-PowerUp module can enumerate privileges for a given process.",
+            "source_ref": "tool--13cd9151-83b7-410d-9f98-25d0f0d1d80d",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "GitHub PowerSploit May 2012",
+                    "description": "PowerShellMafia. (2012, May 26). PowerSploit - A PowerShell Post-Exploitation Framework. Retrieved February 6, 2018.",
+                    "url": "https://github.com/PowerShellMafia/PowerSploit"
+                },
+                {
+                    "source_name": "PowerSploit Documentation",
+                    "description": "PowerSploit. (n.d.). PowerSploit. Retrieved February 6, 2018.",
+                    "url": "http://powersploit.readthedocs.io"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2c417522-9fa6-4f95-b9d6-062c9c2401b5",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-12-14T16:46:06.044Z",
+            "modified": "2019-06-06T19:04:39.207Z",
+            "relationship_type": "uses",
+            "description": "[Cobalt Strike](https://attack.mitre.org/software/S0154)'s \"beacon\" payload can collect information on process details.",
+            "source_ref": "tool--aafea02e-ece5-4bb2-91a6-3bf8c7f38a39",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "cobaltstrike manual",
+                    "description": "Strategic Cyber LLC. (2017, March 14). Cobalt Strike Manual. Retrieved May 24, 2017.",
+                    "url": "https://cobaltstrike.com/downloads/csmanual38.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--32a470e7-4bbc-43e8-ae8e-09b382dd441f",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-12-14T16:46:06.044Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "relationship_type": "uses",
+            "description": "[Tasklist](https://attack.mitre.org/software/S0057) can be used to discover processes running on a system.",
+            "source_ref": "tool--2e45723a-31da-4a7e-aaa6-e01998a6788f",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "external_references": [
+                {
+                    "source_name": "Microsoft Tasklist",
+                    "description": "Microsoft. (n.d.). Tasklist. Retrieved December 23, 2015.",
+                    "url": "https://technet.microsoft.com/en-us/library/bb491010.aspx"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--03f30a17-095b-4656-a7db-87d98628dfd8",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:33:27.023Z",
+            "modified": "2019-08-12T19:49:12.692Z",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--f6469191-1814-4dbe-a081-2a6daf83a10b",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--d69c8146-ab35-4d50-8382-6fc80e641d43",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:32:45.892Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "name": "BLACKCOFFEE",
+            "description": "[BLACKCOFFEE](https://attack.mitre.org/software/S0069) is malware that has been used by several Chinese groups since at least 2013. (Citation: FireEye APT17) (Citation: FireEye Periscope March 2018)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0069",
+                    "external_id": "S0069"
+                },
+                {
+                    "source_name": "BLACKCOFFEE",
+                    "description": "(Citation: FireEye APT17) (Citation: FireEye Periscope March 2018)"
+                },
+                {
+                    "source_name": "FireEye APT17",
+                    "description": "FireEye Labs/FireEye Threat Intelligence. (2015, May 14). Hiding in Plain Sight: FireEye and Microsoft Expose Obfuscation Tactic. Retrieved January 22, 2016.",
+                    "url": "https://www2.fireeye.com/rs/fireye/images/APT17_Report.pdf"
+                },
+                {
+                    "source_name": "FireEye Periscope March 2018",
+                    "description": "FireEye. (2018, March 16). Suspected Chinese Cyber Espionage Group (TEMP.Periscope) Targeting U.S. Engineering and Maritime Industries. Retrieved April 11, 2018.",
+                    "url": "https://www.fireeye.com/blog/threat-research/2018/03/suspected-chinese-espionage-group-targeting-maritime-and-engineering-industries.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "BLACKCOFFEE"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:30:48.728Z",
+            "modified": "2019-08-12T19:49:12.584Z",
+            "name": "Process Discovery",
+            "description": "Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software running on systems within the network. Adversaries may use the information from [Process Discovery](https://attack.mitre.org/techniques/T1057) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\n\n### Windows\n\nAn example command that would obtain details on processes is \"tasklist\" using the [Tasklist](https://attack.mitre.org/software/S0057) utility.\n\n### Mac and Linux\n\nIn Mac and Linux, this is accomplished with the <code>ps</code> command.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1057",
+                    "external_id": "T1057"
+                },
+                {
+                    "source_name": "capec",
+                    "url": "https://capec.mitre.org/data/definitions/573.html",
+                    "external_id": "CAPEC-573"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_data_sources": [
+                "Process monitoring",
+                "Process command-line parameters"
+            ],
+            "x_mitre_detection": "System and network discovery techniques normally occur throughout an operation as an adversary learns the environment. Data and events should not be viewed in isolation, but as part of a chain of behavior that could lead to other activities, such as Lateral Movement, based on the information obtained.\n\nNormal, benign system and network events that look like process discovery may be uncommon, depending on the environment and how they are used. Monitor processes and command-line arguments for actions that could be taken to gather system and network information. Remote access tools with built-in features may interact directly with the Windows API to gather information. Information may also be acquired through Windows system management tools such as [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047) and [PowerShell](https://attack.mitre.org/techniques/T1086).",
+            "x_mitre_permissions_required": [
+                "User",
+                "Administrator",
+                "SYSTEM"
+            ],
+            "x_mitre_platforms": [
+                "Linux",
+                "macOS",
+                "Windows"
+            ],
+            "x_mitre_system_requirements": [
+                "Administrator, SYSTEM may provide better process ownership details"
+            ],
+            "x_mitre_version": "1.1"
+        },
+        {
+            "type": "malware",
+            "id": "malware--d1b7830a-fced-4be3-a99c-f495af9d9e1b",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-10-07T19:05:48.886Z",
+            "modified": "2019-10-14T19:52:22.357Z",
+            "name": "BabyShark",
+            "description": "[BabyShark](https://attack.mitre.org/software/S0414) is a Microsoft Visual Basic (VB) script-based malware family that is believed to be associated with several North Korean campaigns. (Citation: Unit42 BabyShark Feb 2019)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0414",
+                    "external_id": "S0414"
+                },
+                {
+                    "source_name": "BabyShark",
+                    "description": "(Citation: Unit42 BabyShark Feb 2019)(Citation: Unit42 BabyShark Apr 2019)"
+                },
+                {
+                    "source_name": "Unit42 BabyShark Feb 2019",
+                    "description": "Unit 42. (2019, February 22). New BabyShark Malware Targets U.S. National Security Think Tanks. Retrieved October 7, 2019.",
+                    "url": "https://unit42.paloaltonetworks.com/new-babyshark-malware-targets-u-s-national-security-think-tanks/"
+                },
+                {
+                    "source_name": "Unit42 BabyShark Apr 2019",
+                    "description": "Lim, M.. (2019, April 26). BabyShark Malware Part Two \u2013 Attacks Continue Using KimJongRAT and PCRat . Retrieved October 7, 2019.",
+                    "url": "https://unit42.paloaltonetworks.com/babyshark-malware-part-two-attacks-continue-using-kimjongrat-and-pcrat/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "BabyShark"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "malware",
+            "id": "malware--50d6688b-0985-4f3d-8cbe-0c796b30703b",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-09-12T17:40:38.303Z",
+            "modified": "2019-10-14T19:21:25.345Z",
+            "name": "Fysbis",
+            "description": "[Fysbis](https://attack.mitre.org/software/S0410) is a Linux-based backdoor used by [APT28](https://attack.mitre.org/groups/G0007) that dates back to at least 2014.(Citation: Fysbis Palo Alto Analysis)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0410",
+                    "external_id": "S0410"
+                },
+                {
+                    "source_name": "Fysbis Palo Alto Analysis",
+                    "description": "Bryan Lee and Rob Downs. (2016, February 12). A Look Into Fysbis: Sofacy\u2019s Linux Backdoor. Retrieved September 10, 2017.",
+                    "url": "https://researchcenter.paloaltonetworks.com/2016/02/a-look-into-fysbis-sofacys-linux-backdoor/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "Fysbis"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "malware",
+            "id": "malware--cfc75b0d-e579-40ae-ad07-a1ce00d49a6c",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-09-24T12:59:57.991Z",
+            "modified": "2019-10-14T22:06:29.019Z",
+            "name": "ZxShell",
+            "description": "[ZxShell](https://attack.mitre.org/software/S0412) is a remote administration tool and backdoor that can be downloaded from the Internet, particularly from Chinese hacker websites. It has been used since at least 2004.(Citation: FireEye APT41 Aug 2019)(Citation: Talos ZxShell Oct 2014 )",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0412",
+                    "external_id": "S0412"
+                },
+                {
+                    "source_name": "ZxShell",
+                    "description": "(Citation: FireEye APT41 Aug 2019)(Citation: Talos ZxShell Oct 2014 )"
+                },
+                {
+                    "source_name": "Sensocode",
+                    "description": "(Citation: Talos ZxShell Oct 2014 )"
+                },
+                {
+                    "source_name": "FireEye APT41 Aug 2019",
+                    "description": "Fraser, N., et al. (2019, August 7). Double DragonAPT41, a dual espionage and cyber crime operation APT41. Retrieved September 23, 2019.",
+                    "url": "https://content.fireeye.com/apt-41/rpt-apt41"
+                },
+                {
+                    "source_name": "Talos ZxShell Oct 2014 ",
+                    "description": "Allievi, A., et al. (2014, October 28). Threat Spotlight: Group 72, Opening the ZxShell. Retrieved September 24, 2019.",
+                    "url": "https://blogs.cisco.com/security/talos/opening-zxshell"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "ZxShell",
+                "Sensocode"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "malware",
+            "id": "malware--35cd1d01-1ede-44d2-b073-a264d727bc04",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-09-13T13:17:25.718Z",
+            "modified": "2019-10-15T21:19:27.277Z",
+            "name": "Machete",
+            "description": "[Machete](https://attack.mitre.org/software/S0409) is a cyber espionage toolset developed by a Spanish-speaking group known as El [Machete](https://attack.mitre.org/groups/G0095). It is a Python-based backdoor targeting Windows machines, and it was first observed in 2010.(Citation: ESET Machete July 2019)(Citation: Securelist Machete Aug 2014)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0409",
+                    "external_id": "S0409"
+                },
+                {
+                    "source_name": "Machete",
+                    "description": "(Citation: Securelist Machete Aug 2014)"
+                },
+                {
+                    "source_name": "ESET Machete July 2019",
+                    "description": "ESET. (2019, July). MACHETE JUST GOT SHARPER Venezuelan government institutions under attack. Retrieved September 13, 2019.",
+                    "url": "https://www.welivesecurity.com/wp-content/uploads/2019/08/ESET_Machete.pdf"
+                },
+                {
+                    "source_name": "Securelist Machete Aug 2014",
+                    "description": "Kaspersky Global Research and Analysis Team. (2014, August 20). El Machete. Retrieved September 13, 2019.",
+                    "url": "https://securelist.com/el-machete/66108/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "Machete"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_contributors": [
+                "Matias Nicolas Porolli, ESET"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "tool",
+            "id": "tool--3433a9e8-1c47-4320-b9bf-ed449061d1c3",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-03-11T14:13:40.648Z",
+            "modified": "2019-06-24T17:15:43.818Z",
+            "name": "Empire",
+            "description": "[Empire](https://attack.mitre.org/software/S0363) is an open source, cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python, the post-exploitation agents are written in pure [PowerShell](https://attack.mitre.org/techniques/T1086) for Windows and Python for Linux/macOS. [Empire](https://attack.mitre.org/software/S0363) was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries.(Citation: NCSC Joint Report Public Tools)(Citation: Github PowerShell Empire)(Citation: GitHub ATTACK Empire)\n\n",
+            "labels": [
+                "tool"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0363",
+                    "external_id": "S0363"
+                },
+                {
+                    "source_name": "EmPyre",
+                    "description": "(Citation: Github PowerShell Empire)"
+                },
+                {
+                    "source_name": "PowerShell Empire",
+                    "description": "(Citation: Github PowerShell Empire)"
+                },
+                {
+                    "source_name": "NCSC Joint Report Public Tools",
+                    "description": "The Australian Cyber Security Centre (ACSC), the Canadian Centre for Cyber Security (CCCS), the New Zealand National Cyber Security Centre (NZ NCSC), CERT New Zealand, the UK National Cyber Security Centre (UK NCSC) and the US National Cybersecurity and Communications Integration Center (NCCIC). (2018, October 11). Joint report on publicly available hacking tools. Retrieved March 11, 2019.",
+                    "url": "https://s3.eu-west-1.amazonaws.com/ncsc-content/files/Joint%20report%20on%20publicly%20available%20hacking%20tools%20%28NCSC%29.pdf"
+                },
+                {
+                    "source_name": "Github PowerShell Empire",
+                    "description": "Schroeder, W., Warner, J., Nelson, M. (n.d.). Github PowerShellEmpire. Retrieved April 28, 2016.",
+                    "url": "https://github.com/PowerShellEmpire/Empire"
+                },
+                {
+                    "source_name": "GitHub ATTACK Empire",
+                    "description": "Stepanic, D. (2018, September 2). attck_empire: Generate ATT&CK Navigator layer file from PowerShell Empire agent logs. Retrieved March 11, 2019.",
+                    "url": "https://github.com/dstepanic/attck_empire"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "Empire",
+                "EmPyre",
+                "PowerShell Empire"
+            ],
+            "x_mitre_version": "1.0",
+            "x_mitre_platforms": [
+                "Linux",
+                "macOS",
+                "Windows"
+            ]
+        },
+        {
+            "type": "tool",
+            "id": "tool--cb69b20d-56d0-41ab-8440-4a4b251614d4",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2018-04-18T17:59:24.739Z",
+            "modified": "2019-04-24T17:52:47.605Z",
+            "name": "Pupy",
+            "description": "[Pupy](https://attack.mitre.org/software/S0192) is an open source, cross-platform (Windows, Linux, OSX, Android) remote administration and post-exploitation tool. (Citation: GitHub Pupy) It is written in Python and can be generated as a payload in several different ways (Windows exe, Python file, PowerShell oneliner/file, Linux elf, APK, Rubber Ducky, etc.). (Citation: GitHub Pupy) [Pupy](https://attack.mitre.org/software/S0192) is publicly available on GitHub. (Citation: GitHub Pupy)",
+            "labels": [
+                "tool"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0192",
+                    "external_id": "S0192"
+                },
+                {
+                    "source_name": "GitHub Pupy",
+                    "description": "Nicolas Verdier. (n.d.). Retrieved January 29, 2018.",
+                    "url": "https://github.com/n1nj4sec/pupy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "Pupy"
+            ],
+            "x_mitre_platforms": [
+                "Linux",
+                "Windows",
+                "macOS",
+                "Android"
+            ],
+            "x_mitre_version": "1.1"
+        },
+        {
+            "type": "tool",
+            "id": "tool--13cd9151-83b7-410d-9f98-25d0f0d1d80d",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2018-04-18T17:59:24.739Z",
+            "modified": "2019-04-24T23:43:07.902Z",
+            "name": "PowerSploit",
+            "description": "[PowerSploit](https://attack.mitre.org/software/S0194) is an open source, offensive security framework comprised of [PowerShell](https://attack.mitre.org/techniques/T1086) modules and scripts that perform a wide range of tasks related to penetration testing such as code execution, persistence, bypassing anti-virus, recon, and exfiltration. (Citation: GitHub PowerSploit May 2012) (Citation: PowerShellMagazine PowerSploit July 2014) (Citation: PowerSploit Documentation)",
+            "labels": [
+                "tool"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0194",
+                    "external_id": "S0194"
+                },
+                {
+                    "source_name": "GitHub PowerSploit May 2012",
+                    "description": "PowerShellMafia. (2012, May 26). PowerSploit - A PowerShell Post-Exploitation Framework. Retrieved February 6, 2018.",
+                    "url": "https://github.com/PowerShellMafia/PowerSploit"
+                },
+                {
+                    "source_name": "PowerShellMagazine PowerSploit July 2014",
+                    "description": "Graeber, M. (2014, July 8). PowerSploit. Retrieved February 6, 2018.",
+                    "url": "http://www.powershellmagazine.com/2014/07/08/powersploit/"
+                },
+                {
+                    "source_name": "PowerSploit Documentation",
+                    "description": "PowerSploit. (n.d.). PowerSploit. Retrieved February 6, 2018.",
+                    "url": "http://powersploit.readthedocs.io"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_aliases": [
+                "PowerSploit"
+            ],
+            "x_mitre_version": "1.1"
+        },
+        {
+            "type": "tool",
+            "id": "tool--aafea02e-ece5-4bb2-91a6-3bf8c7f38a39",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-12-14T16:46:06.044Z",
+            "modified": "2019-06-06T19:04:39.061Z",
+            "name": "Cobalt Strike",
+            "description": "[Cobalt Strike](https://attack.mitre.org/software/S0154) is a commercial, full-featured, penetration testing tool which bills itself as \u201cadversary simulation software designed to execute targeted attacks and emulate the post-exploitation actions of advanced threat actors\u201d. Cobalt Strike\u2019s interactive post-exploit capabilities cover the full range of ATT&CK tactics, all executed within a single, integrated system. (Citation: cobaltstrike manual)\n\nIn addition to its own capabilities, [Cobalt Strike](https://attack.mitre.org/software/S0154) leverages the capabilities of other well-known tools such as Metasploit and [Mimikatz](https://attack.mitre.org/software/S0002). (Citation: cobaltstrike manual)",
+            "labels": [
+                "tool"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0154",
+                    "external_id": "S0154"
+                },
+                {
+                    "source_name": "cobaltstrike manual",
+                    "description": "Strategic Cyber LLC. (2017, March 14). Cobalt Strike Manual. Retrieved May 24, 2017.",
+                    "url": "https://cobaltstrike.com/downloads/csmanual38.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_aliases": [
+                "Cobalt Strike"
+            ],
+            "x_mitre_contributors": [
+                "Josh Abraham"
+            ],
+            "x_mitre_version": "1.2"
+        },
+        {
+            "type": "tool",
+            "id": "tool--2e45723a-31da-4a7e-aaa6-e01998a6788f",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:32:39.233Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "name": "Tasklist",
+            "description": "The [Tasklist](https://attack.mitre.org/software/S0057) utility displays a list of applications and services with their Process IDs (PID) for all tasks running on either a local or a remote computer. It is packaged with Windows operating systems and can be executed from the command-line interface. (Citation: Microsoft Tasklist)",
+            "labels": [
+                "tool"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0057",
+                    "external_id": "S0057"
+                },
+                {
+                    "source_name": "Microsoft Tasklist",
+                    "description": "Microsoft. (n.d.). Tasklist. Retrieved December 23, 2015.",
+                    "url": "https://technet.microsoft.com/en-us/library/bb491010.aspx"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_aliases": [
+                "Tasklist"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--f6469191-1814-4dbe-a081-2a6daf83a10b",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2018-10-17T00:14:20.652Z",
+            "modified": "2019-07-25T11:27:30.259Z",
+            "name": "Process Discovery Mitigation",
+            "description": "Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about processes, and audit and/or block them by using whitelisting (Citation: Beechey 2010) tools, like AppLocker, (Citation: Windows Commands JPCERT) (Citation: NSA MS AppLocker) or Software Restriction Policies (Citation: Corio 2008) where appropriate. (Citation: TechNet Applocker vs SRP)",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/mitigations/T1057",
+                    "external_id": "T1057"
+                },
+                {
+                    "source_name": "Beechey 2010",
+                    "description": "Beechey, J. (2010, December). Application Whitelisting: Panacea or Propaganda?. Retrieved November 18, 2014.",
+                    "url": "http://www.sans.org/reading-room/whitepapers/application/application-whitelisting-panacea-propaganda-33599"
+                },
+                {
+                    "source_name": "Windows Commands JPCERT",
+                    "description": "Tomonaga, S. (2016, January 26). Windows Commands Abused by Attackers. Retrieved February 2, 2016.",
+                    "url": "http://blog.jpcert.or.jp/2016/01/windows-commands-abused-by-attackers.html"
+                },
+                {
+                    "source_name": "NSA MS AppLocker",
+                    "description": "NSA Information Assurance Directorate. (2014, August). Application Whitelisting Using Microsoft AppLocker. Retrieved March 31, 2016.",
+                    "url": "https://www.iad.gov/iad/library/ia-guidance/tech-briefs/application-whitelisting-using-microsoft-applocker.cfm"
+                },
+                {
+                    "source_name": "Corio 2008",
+                    "description": "Corio, C., & Sayana, D. P. (2008, June). Application Lockdown with Software Restriction Policies. Retrieved November 18, 2014.",
+                    "url": "http://technet.microsoft.com/en-us/magazine/2008.06.srp.aspx"
+                },
+                {
+                    "source_name": "TechNet Applocker vs SRP",
+                    "description": "Microsoft. (2012, June 27). Using Software Restriction Policies and AppLocker Policies. Retrieved April 7, 2016.",
+                    "url": "https://technet.microsoft.com/en-us/library/ee791851.aspx"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_deprecated": true,
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

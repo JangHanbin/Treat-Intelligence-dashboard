@@ -1,0 +1,558 @@
+{
+    "type": "bundle",
+    "id": "bundle--2f6111d0-5a72-4c34-b88a-708056bfcf56",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8b0e9de1-a7b0-479e-aee7-76f2549508c6",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-12-14T16:46:06.044Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "relationship_type": "uses",
+            "description": "[BLACKCOFFEE](https://attack.mitre.org/software/S0069) uses Microsoft\u2019s TechNet Web portal to obtain a dead drop resolver containing an encoded tag with the IP address of a command and control server. It has also obfuscated its C2 traffic as normal traffic to sites such as Github.",
+            "source_ref": "malware--d69c8146-ab35-4d50-8382-6fc80e641d43",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "external_references": [
+                {
+                    "source_name": "FireEye APT17",
+                    "description": "FireEye Labs/FireEye Threat Intelligence. (2015, May 14). Hiding in Plain Sight: FireEye and Microsoft Expose Obfuscation Tactic. Retrieved January 22, 2016.",
+                    "url": "https://www2.fireeye.com/rs/fireye/images/APT17_Report.pdf"
+                },
+                {
+                    "source_name": "FireEye Periscope March 2018",
+                    "description": "FireEye. (2018, March 16). Suspected Chinese Cyber Espionage Group (TEMP.Periscope) Targeting U.S. Engineering and Maritime Industries. Retrieved April 11, 2018.",
+                    "url": "https://www.fireeye.com/blog/threat-research/2018/03/suspected-chinese-espionage-group-targeting-maritime-and-engineering-industries.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--970635e8-9767-4654-b6ff-e1cd12bc206e",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-07-18T21:21:18.293Z",
+            "modified": "2019-07-18T21:21:18.293Z",
+            "relationship_type": "mitigates",
+            "description": "Web proxies can be used to enforce external network communication policy that prevents use of unauthorized external services.",
+            "source_ref": "course-of-action--21da4fd4-27ad-4e9c-b93d-0b9b14d02c96",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--033a5e59-ab65-485b-a9c0-775977e8abd0",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-06-21T17:23:28.006Z",
+            "modified": "2019-07-14T21:02:01.443Z",
+            "relationship_type": "uses",
+            "description": "[PowerStallion](https://attack.mitre.org/software/S0393) uses Microsoft OneDrive as a C2 server via a network drive mapped with <code>net use</code>.",
+            "source_ref": "malware--dcac85c1-6485-4790-84f6-de5e6f6b91dd",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "external_references": [
+                {
+                    "source_name": "ESET Turla PowerShell May 2019",
+                    "description": "Faou, M. and Dumont R.. (2019, May 29). A dive into Turla PowerShell usage. Retrieved June 14, 2019.",
+                    "url": "https://www.welivesecurity.com/2019/05/29/turla-powershell-usage/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3024f916-b25c-4dd8-aab3-4d681b335da1",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-06-21T14:35:00.080Z",
+            "modified": "2019-07-18T21:21:18.325Z",
+            "relationship_type": "mitigates",
+            "description": "Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level.",
+            "source_ref": "course-of-action--12241367-a8b7-49b4-b86e-2236901ba50c",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--79c960d7-edf2-4005-8c0a-31acd830ca8a",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-05-02T14:56:18.652Z",
+            "modified": "2019-06-12T20:05:18.524Z",
+            "relationship_type": "uses",
+            "description": "[Revenge RAT](https://attack.mitre.org/software/S0379) used blogpost.com as its primary command and control server during a campaign.",
+            "source_ref": "malware--bdb27a1d-1844-42f1-a0c0-826027ae0326",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "external_references": [
+                {
+                    "source_name": "Cofense RevengeRAT Feb 2019",
+                    "description": "Gannon, M. (2019, February 11). With Upgrades in Delivery and Support Infrastructure, Revenge RAT Malware is a Bigger Threat. Retrieved May 1, 2019.",
+                    "url": "https://cofense.com/upgrades-delivery-support-infrastructure-revenge-rat-malware-bigger-threat/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ac4e0574-879e-4155-84ed-5b2d8be0b603",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-04-22T18:35:20.097Z",
+            "modified": "2019-06-24T17:15:45.622Z",
+            "relationship_type": "uses",
+            "description": "[Empire](https://attack.mitre.org/software/S0363) can use Dropbox and GitHub for C2.",
+            "source_ref": "tool--3433a9e8-1c47-4320-b9bf-ed449061d1c3",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "external_references": [
+                {
+                    "source_name": "Github PowerShell Empire",
+                    "description": "Schroeder, W., Warner, J., Nelson, M. (n.d.). Github PowerShellEmpire. Retrieved April 28, 2016.",
+                    "url": "https://github.com/PowerShellEmpire/Empire"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--83bab2a0-5cbc-406e-beaf-a657ef73717d",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-04-18T00:26:13.517Z",
+            "modified": "2019-04-24T23:55:43.441Z",
+            "relationship_type": "uses",
+            "description": "[RogueRobin](https://attack.mitre.org/software/S0270) has used Google Drive as a Command and Control channel.",
+            "source_ref": "malware--8ec6e3b4-b06d-4805-b6aa-af916acc2122",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "external_references": [
+                {
+                    "source_name": "Unit42 DarkHydrus Jan 2019",
+                    "description": "Lee, B., Falcone, R. (2019, January 18). DarkHydrus delivers new Trojan that can use Google Drive for C2 communications. Retrieved April 17, 2019.",
+                    "url": "https://unit42.paloaltonetworks.com/darkhydrus-delivers-new-trojan-that-can-use-google-drive-for-c2-communications/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--fc56f0e8-e059-403a-88e4-bd0b61bbc4b7",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-02-12T19:56:02.352Z",
+            "modified": "2019-06-28T15:15:54.548Z",
+            "relationship_type": "uses",
+            "description": "[Xbash](https://attack.mitre.org/software/S0341) can obtain a webpage hosted on Pastebin to update its C2 domain list.",
+            "source_ref": "malware--6a92d80f-cc65-45f6-aa66-3cdea6786b3c",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "external_references": [
+                {
+                    "source_name": "Unit42 Xbash Sept 2018",
+                    "description": "Xiao, C. (2018, September 17). Xbash Combines Botnet, Ransomware, Coinmining in Worm that Targets Linux and Windows. Retrieved November 14, 2018.",
+                    "url": "https://researchcenter.paloaltonetworks.com/2018/09/unit42-xbash-combines-botnet-ransomware-coinmining-worm-targets-linux-windows/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--91af9744-413c-4e9c-bfdb-a9ca167e9bb5",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:33:27.028Z",
+            "modified": "2019-07-25T12:34:04.651Z",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--4689b9fb-dca4-473e-831b-34717ad50c97",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--d69c8146-ab35-4d50-8382-6fc80e641d43",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:32:45.892Z",
+            "modified": "2018-10-17T00:14:20.652Z",
+            "name": "BLACKCOFFEE",
+            "description": "[BLACKCOFFEE](https://attack.mitre.org/software/S0069) is malware that has been used by several Chinese groups since at least 2013. (Citation: FireEye APT17) (Citation: FireEye Periscope March 2018)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0069",
+                    "external_id": "S0069"
+                },
+                {
+                    "source_name": "BLACKCOFFEE",
+                    "description": "(Citation: FireEye APT17) (Citation: FireEye Periscope March 2018)"
+                },
+                {
+                    "source_name": "FireEye APT17",
+                    "description": "FireEye Labs/FireEye Threat Intelligence. (2015, May 14). Hiding in Plain Sight: FireEye and Microsoft Expose Obfuscation Tactic. Retrieved January 22, 2016.",
+                    "url": "https://www2.fireeye.com/rs/fireye/images/APT17_Report.pdf"
+                },
+                {
+                    "source_name": "FireEye Periscope March 2018",
+                    "description": "FireEye. (2018, March 16). Suspected Chinese Cyber Espionage Group (TEMP.Periscope) Targeting U.S. Engineering and Maritime Industries. Retrieved April 11, 2018.",
+                    "url": "https://www.fireeye.com/blog/threat-research/2018/03/suspected-chinese-espionage-group-targeting-maritime-and-engineering-industries.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "BLACKCOFFEE"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-05-31T21:31:13.915Z",
+            "modified": "2019-07-18T21:21:18.135Z",
+            "name": "Web Service",
+            "description": "Adversaries may use an existing, legitimate external Web service as a means for relaying commands to a compromised system.\n\nThese commands may also include pointers to command and control (C2) infrastructure. Adversaries may post content, known as a dead drop resolver, on Web services with embedded (and often obfuscated/encoded) domains or IP addresses. Once infected, victims will reach out to and be redirected by these resolvers.\n\nPopular websites and social media acting as a mechanism for C2 may give a significant amount of cover due to the likelihood that hosts within a network are already communicating with them prior to a compromise. Using common services, such as those offered by Google or Twitter, makes it easier for adversaries to hide in expected noise. Web service providers commonly use SSL/TLS encryption, giving adversaries an added level of protection.\n\nUse of Web services may also protect back-end C2 infrastructure from discovery through malware binary analysis while also enabling operational resiliency (since this infrastructure may be dynamically changed).",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                },
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "defense-evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1102",
+                    "external_id": "T1102"
+                },
+                {
+                    "source_name": "University of Birmingham C2",
+                    "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
+                    "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_contributors": [
+                "Anastasios Pingios"
+            ],
+            "x_mitre_data_sources": [
+                "Host network interface",
+                "Netflow/Enclave netflow",
+                "Network protocol analysis",
+                "Packet capture",
+                "SSL/TLS inspection"
+            ],
+            "x_mitre_version": "1.0",
+            "x_mitre_defense_bypassed": [
+                "Binary Analysis",
+                "Log analysis",
+                "Firewall"
+            ],
+            "x_mitre_detection": "Host data that can relate unknown or suspicious process activity using a network connection is important to supplement any existing indicators of compromise based on malware command and control signatures and infrastructure or the presence of strong encryption. Packet capture analysis will require SSL/TLS inspection if data is encrypted. Analyze network data for uncommon data flows (e.g., a client sending significantly more data than it receives from a server). User behavior monitoring may help to detect abnormal patterns of activity. Analyze packet contents to detect communications that do not follow the expected protocol behavior for the port that is being used. (Citation: University of Birmingham C2)",
+            "x_mitre_network_requirements": true,
+            "x_mitre_permissions_required": [
+                "User"
+            ],
+            "x_mitre_platforms": [
+                "Linux",
+                "macOS",
+                "Windows"
+            ]
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--21da4fd4-27ad-4e9c-b93d-0b9b14d02c96",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-06-06T20:52:59.206Z",
+            "modified": "2019-06-06T20:52:59.206Z",
+            "name": "Restrict Web-Based Content",
+            "description": "Restrict use of certain websites, block downloads/attachments, block Javascript, restrict browser extensions, etc.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/mitigations/M1021",
+                    "external_id": "M1021"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "malware",
+            "id": "malware--dcac85c1-6485-4790-84f6-de5e6f6b91dd",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-06-21T17:23:27.855Z",
+            "modified": "2019-07-14T21:02:01.124Z",
+            "name": "PowerStallion",
+            "description": "[PowerStallion](https://attack.mitre.org/software/S0393) is a lightweight [PowerShell](https://attack.mitre.org/techniques/T1086) backdoor used by [Turla](https://attack.mitre.org/groups/G0010), possibly as a recovery access tool to install other backdoors.(Citation: ESET Turla PowerShell May 2019)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0393",
+                    "external_id": "S0393"
+                },
+                {
+                    "source_name": "ESET Turla PowerShell May 2019",
+                    "description": "Faou, M. and Dumont R.. (2019, May 29). A dive into Turla PowerShell usage. Retrieved June 14, 2019.",
+                    "url": "https://www.welivesecurity.com/2019/05/29/turla-powershell-usage/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "PowerStallion"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--12241367-a8b7-49b4-b86e-2236901ba50c",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-06-10T20:46:02.263Z",
+            "modified": "2019-06-10T20:46:02.263Z",
+            "name": "Network Intrusion Prevention",
+            "description": "Use intrusion detection signatures to block traffic at network boundaries.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/mitigations/M1031",
+                    "external_id": "M1031"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "malware",
+            "id": "malware--bdb27a1d-1844-42f1-a0c0-826027ae0326",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-05-02T01:07:36.780Z",
+            "modified": "2019-10-08T13:40:44.008Z",
+            "name": "Revenge RAT",
+            "description": "[Revenge RAT](https://attack.mitre.org/software/S0379) is a freely available remote access tool written in .NET (C#).(Citation: Cylance Shaheen Nov 2018)(Citation: Cofense RevengeRAT Feb 2019)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0379",
+                    "external_id": "S0379"
+                },
+                {
+                    "source_name": "Cylance Shaheen Nov 2018",
+                    "description": "Livelli, K, et al. (2018, November 12). Operation Shaheen. Retrieved May 1, 2019.",
+                    "url": "https://www.cylance.com/content/dam/cylance-web/en-us/resources/knowledge-center/resource-library/reports/WhiteCompanyOperationShaheenReport.pdf?_ga=2.161661948.1943296560.1555683782-1066572390.1555511517"
+                },
+                {
+                    "source_name": "Cofense RevengeRAT Feb 2019",
+                    "description": "Gannon, M. (2019, February 11). With Upgrades in Delivery and Support Infrastructure, Revenge RAT Malware is a Bigger Threat. Retrieved May 1, 2019.",
+                    "url": "https://cofense.com/upgrades-delivery-support-infrastructure-revenge-rat-malware-bigger-threat/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "Revenge RAT"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        },
+        {
+            "type": "tool",
+            "id": "tool--3433a9e8-1c47-4320-b9bf-ed449061d1c3",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-03-11T14:13:40.648Z",
+            "modified": "2019-06-24T17:15:43.818Z",
+            "name": "Empire",
+            "description": "[Empire](https://attack.mitre.org/software/S0363) is an open source, cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python, the post-exploitation agents are written in pure [PowerShell](https://attack.mitre.org/techniques/T1086) for Windows and Python for Linux/macOS. [Empire](https://attack.mitre.org/software/S0363) was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries.(Citation: NCSC Joint Report Public Tools)(Citation: Github PowerShell Empire)(Citation: GitHub ATTACK Empire)\n\n",
+            "labels": [
+                "tool"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0363",
+                    "external_id": "S0363"
+                },
+                {
+                    "source_name": "EmPyre",
+                    "description": "(Citation: Github PowerShell Empire)"
+                },
+                {
+                    "source_name": "PowerShell Empire",
+                    "description": "(Citation: Github PowerShell Empire)"
+                },
+                {
+                    "source_name": "NCSC Joint Report Public Tools",
+                    "description": "The Australian Cyber Security Centre (ACSC), the Canadian Centre for Cyber Security (CCCS), the New Zealand National Cyber Security Centre (NZ NCSC), CERT New Zealand, the UK National Cyber Security Centre (UK NCSC) and the US National Cybersecurity and Communications Integration Center (NCCIC). (2018, October 11). Joint report on publicly available hacking tools. Retrieved March 11, 2019.",
+                    "url": "https://s3.eu-west-1.amazonaws.com/ncsc-content/files/Joint%20report%20on%20publicly%20available%20hacking%20tools%20%28NCSC%29.pdf"
+                },
+                {
+                    "source_name": "Github PowerShell Empire",
+                    "description": "Schroeder, W., Warner, J., Nelson, M. (n.d.). Github PowerShellEmpire. Retrieved April 28, 2016.",
+                    "url": "https://github.com/PowerShellEmpire/Empire"
+                },
+                {
+                    "source_name": "GitHub ATTACK Empire",
+                    "description": "Stepanic, D. (2018, September 2). attck_empire: Generate ATT&CK Navigator layer file from PowerShell Empire agent logs. Retrieved March 11, 2019.",
+                    "url": "https://github.com/dstepanic/attck_empire"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "Empire",
+                "EmPyre",
+                "PowerShell Empire"
+            ],
+            "x_mitre_version": "1.0",
+            "x_mitre_platforms": [
+                "Linux",
+                "macOS",
+                "Windows"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--8ec6e3b4-b06d-4805-b6aa-af916acc2122",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2018-10-17T00:14:20.652Z",
+            "modified": "2019-04-24T23:55:43.081Z",
+            "name": "RogueRobin",
+            "description": "[RogueRobin](https://attack.mitre.org/software/S0270) is a payload used by [DarkHydrus](https://attack.mitre.org/groups/G0079) that has been developed in PowerShell and C#. (Citation: Unit 42 DarkHydrus July 2018)(Citation: Unit42 DarkHydrus Jan 2019)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0270",
+                    "external_id": "S0270"
+                },
+                {
+                    "source_name": "RogueRobin",
+                    "description": "(Citation: Unit 42 DarkHydrus July 2018)"
+                },
+                {
+                    "source_name": "Unit 42 DarkHydrus July 2018",
+                    "description": "Falcone, R., et al. (2018, July 27). New Threat Actor Group DarkHydrus Targets Middle East Government. Retrieved August 2, 2018.",
+                    "url": "https://researchcenter.paloaltonetworks.com/2018/07/unit42-new-threat-actor-group-darkhydrus-targets-middle-east-government/"
+                },
+                {
+                    "source_name": "Unit42 DarkHydrus Jan 2019",
+                    "description": "Lee, B., Falcone, R. (2019, January 18). DarkHydrus delivers new Trojan that can use Google Drive for C2 communications. Retrieved April 17, 2019.",
+                    "url": "https://unit42.paloaltonetworks.com/darkhydrus-delivers-new-trojan-that-can-use-google-drive-for-c2-communications/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "RogueRobin"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "2.0"
+        },
+        {
+            "type": "malware",
+            "id": "malware--6a92d80f-cc65-45f6-aa66-3cdea6786b3c",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2019-01-30T13:28:47.452Z",
+            "modified": "2019-06-28T15:15:54.241Z",
+            "name": "Xbash",
+            "description": "[Xbash](https://attack.mitre.org/software/S0341) is a malware family that has targeted Linux and Microsoft Windows servers. The malware has been tied to the Iron Group, a threat actor group known for previous ransomware attacks. [Xbash](https://attack.mitre.org/software/S0341) was developed in Python and then converted into a self-contained Linux ELF executable by using PyInstaller.(Citation: Unit42 Xbash Sept 2018)",
+            "labels": [
+                "malware"
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S0341",
+                    "external_id": "S0341"
+                },
+                {
+                    "source_name": "Xbash",
+                    "description": "(Citation: Unit42 Xbash Sept 2018)"
+                },
+                {
+                    "source_name": "Unit42 Xbash Sept 2018",
+                    "description": "Xiao, C. (2018, September 17). Xbash Combines Botnet, Ransomware, Coinmining in Worm that Targets Linux and Windows. Retrieved November 14, 2018.",
+                    "url": "https://researchcenter.paloaltonetworks.com/2018/09/unit42-xbash-combines-botnet-ransomware-coinmining-worm-targets-linux-windows/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_aliases": [
+                "Xbash"
+            ],
+            "x_mitre_platforms": [
+                "Windows",
+                "Linux"
+            ],
+            "x_mitre_version": "1.1"
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--4689b9fb-dca4-473e-831b-34717ad50c97",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2018-10-17T00:14:20.652Z",
+            "modified": "2019-07-25T12:34:04.565Z",
+            "name": "Web Service Mitigation",
+            "description": "Firewalls and Web proxies can be used to enforce external network communication policy. It may be difficult for an organization to block particular services because so many of them are commonly used during the course of business.\n\nNetwork intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific protocol or encoded commands used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool C2 signatures over time or construct protocols in such a way as to avoid detection by common defensive tools. (Citation: University of Birmingham C2)",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/mitigations/T1102",
+                    "external_id": "T1102"
+                },
+                {
+                    "source_name": "University of Birmingham C2",
+                    "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
+                    "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "x_mitre_deprecated": true,
+            "x_mitre_version": "1.0"
+        }
+    ]
+}
