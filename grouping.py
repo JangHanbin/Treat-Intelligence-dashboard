@@ -286,11 +286,16 @@ def make_group(group_name):
     with open('./bundles/{0}-bundle.json'.format(group_name), "w") as wf:
         wf.write(str(Bundle(objects=gb.objects)))
 
+
     with open('./bundles/{0}-bundle.json'.format(group_name), "r") as f:
        obj_list = json.loads(f.read())["objects"]
 
     g = Group(obj_list)
     g.grouping()
+
+    # update for demo will update more fancy.
+    with open('./grouping/{0}-bundle.json'.format(group_name), 'w') as f:
+        wf.write(str(Bundle(objects=gb.objects)))
 
 
 

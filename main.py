@@ -100,8 +100,8 @@ def get_group_file(path, file_name):
         pass  # ignore errors
     else:
         for name in lst:
-            # print(name)
             fn = os.path.join(path, name)
+
             if os.path.isdir(fn):
                 data = get_group_file(fn, file_name)
                 if data:
@@ -110,6 +110,7 @@ def get_group_file(path, file_name):
                 if name == file_name:
                     with open(fn, 'r') as f:
                         data = json.loads(f.read())
+                        break
 
     return data
 
