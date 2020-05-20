@@ -130,8 +130,6 @@ def get_group_json():
 
 @app.route('/visualize/<file_name>', methods=['GET', 'POST'])
 def visualize(file_name):
-    print(file_name)
-    print('HH')
     return render_template('visualize.html', stix_json=file_name)
 
 if __name__=='__main__':
