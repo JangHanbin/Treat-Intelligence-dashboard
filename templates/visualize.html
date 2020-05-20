@@ -1,0 +1,159 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}ADD Demo page{% endblock %}
+
+{% block head %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/ali-nav.css')}}">
+    <!--<link rel="stylesheet" href="{{url_for('static', filename='/css/json-beauty1.css')}}">-->
+    <!--<link rel="stylesheet" href="{{url_for('static', filename='/css/json-beauty2.css')}}">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='application.css') }}">
+    <!-- <script src="/static/require.js" data-main="application"></script> -->
+    <script src="{{ url_for('static', filename='require.js') }}" data-main="/static/application"></script>
+    <script src="{{ url_for('static', filename='application.js') }}" data-main="application"></script>
+    <style>
+        .selected {
+            /* Drop-shadow SVG styling has to go here for compatibility reasons */
+            filter: url("#drop-shadow");
+        }
+    </style>
+
+{% endblock %}
+{% block navbar %}
+    <div class="navbar navbar-fixed-top">
+        <!-- ... -->
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Threat Intelligence - Visualize </h1>
+
+        <div class="pkg-nav global-action">
+            <div class="nav-steps">
+                <div class="nav-step nav-step-active">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line left">
+                        <line x1="4" y1="3" x2="100%" y2="3"></line>
+                    </svg>
+                    <div class="step-content">
+                        <div class="step-icon"><i class="iconfont icon-baoguofahuo-xianxing"></i></div>
+                        <a href="//global.cainiao.com" target="_blank" class="current-img-icon"><img src="//img.alicdn.com/tps/TB1OU3iOFXXXXc8XFXXXXXXXXXX-90-90.gif" alt="current"></a>
+                        <p><span class="light-desc">Search</span></p>
+                    </div>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line right">
+                        <line x1="6" y1="3" x2="100%" y2="3"></line>
+                    </svg>
+                    <span class="step-tag step-circle"></span> <span class="step-tag step-exception"><i class="iconfont icon-gantanhao-yuankuang"></i></span>
+                </div>
+                <div class="nav-step nav-step-active">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line left">
+                        <line x1="4" y1="3" x2="100%" y2="3"></line>
+                    </svg>
+                    <div class="step-content">
+                        <div class="step-icon"><i class="iconfont icon-touchengkongyun"></i></div>
+                        <a href="//global.cainiao.com" target="_blank" class="current-img-icon"><img src="//img.alicdn.com/tps/TB1OU3iOFXXXXc8XFXXXXXXXXXX-90-90.gif" alt="current"></a>
+                        <p><span class="light-desc">Grouping</span></p>
+                    </div>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line right">
+                        <line x1="6" y1="3" x2="100%" y2="3"></line>
+                    </svg>
+                    <span class="step-tag step-circle"></span> <span class="step-tag step-exception"><i class="iconfont icon-gantanhao-yuankuang"></i></span>
+                </div>
+                <div class="nav-step nav-step-active nav-step-current">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line left">
+                        <line x1="4" y1="3" x2="100%" y2="3"></line>
+                    </svg>
+                    <div class="step-content">
+                        <div class="step-icon"><i class="iconfont icon-weicheng"></i></div>
+                        <a href="//global.cainiao.com" target="_blank" class="current-img-icon"><img src="//img.alicdn.com/tps/TB1OU3iOFXXXXc8XFXXXXXXXXXX-90-90.gif"  height="90"  width="90" alt="current"></a>
+                        <p><span class="light-desc">Visualization</span></p>
+                    </div>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line right">
+                        <line x1="6" y1="3" x2="100%" y2="3"></line>
+                    </svg>
+                    <span class="step-tag step-circle"></span> <span class="step-tag step-exception"><i class="iconfont icon-gantanhao-yuankuang"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 style="text-align: center">{{ stix_json }}</h2>
+    <div id="uploader">
+        <input type="hidden" id="file_name" value="">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <input type="hidden" id="files" name="files" /><br>
+        <input type="hidden" id="url" name="url" placeholder="Paste URL here" /><br>
+        <textarea readonly id="paste-area-stix-json" name="pasted" placeholder="Copy/Paste JSON data here..."></textarea><br>
+        <button id="paste-parser" >Visualize</button>
+        {#    <br />#}
+        {#    <p>-- Configuration --</p>#}
+        <textarea style="display:none;" id="paste-area-custom-config" name="pasted" placeholder="Copy/Paste, in JSON format, (if you want to specify this) your custom config for the graph as such: &#10;{&#10;&#34;object_type&#34;: &#10;&#9;{&#10;&#9;&#9;&#34;display_property&#34;: &#60;nameOfProperty&#62;, &#10;&#9;&#9;&#34;display_icon&#34;: &#60;nameOfIconFile&#62;&#10;&#9;}&#10;}&#10;&#10;Please note that the above properties are the only currently-supported customizations, and at least 1 of them has to be specified."></textarea>
+
+    </div>
+    <hr>
+    <div id="canvas-container" class="hidden">
+        <div id="canvas-wrapper">
+            <svg id="canvas" style="border: solid 1px black;"></svg>
+            <p>Nodes are draggable! (Node will 'pin' on mouseup)</p>
+            <p>Double-click a pinned node to unpin it!</p>
+            <p>Click the 'Selected Node' area to expand/shrink it.</p>
+        </div>
+        <div id="legend" class="sidebar">
+            <h2>Legend</h2>
+            <ul id="legend-content"></ul>
+        </div>
+        <div id="selected" class="sidebar">
+            <h2>Selected Node</h2>
+            <div id="selection">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>document.getElementById('file_name').value="{{ stix_json }}"</script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+        function fnGetJson(){
+            var file_name = $('#file_name').val();
+            var csrf_token = "{{ csrf_token() }}";
+            $.ajaxSetup({
+                beforeSend: function(xhr, settings) {
+                    if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrf_token);
+                    }
+                }
+            });
+
+            $.ajax({
+
+                type : 'POST',
+                url : '/get_group_json',
+                data : {
+                    'file_name': file_name
+                },
+                dataType : 'JSON',
+
+                complete: function () {
+                    $('#loading').hide()
+
+                },
+                success : function(result){
+                    $('#paste-area-stix-json').val(JSON.stringify(result, null, '\t'))
+
+                    {#$('#paste-parser').click()#}
+                    {#$('#paste-parser').click()#}
+
+                    // alert("result = "+ result);
+                },
+
+                error : function(xtr,status,error){
+                    alert(xtr +":"+status+":"+error);
+                }
+            });
+        }
+    </script>
+    <script>onload=fnGetJson()</script>
+{% endblock %}

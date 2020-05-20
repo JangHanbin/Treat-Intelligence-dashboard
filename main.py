@@ -56,6 +56,7 @@ def fonts(file):
 
 
 
+
 def make_tree(path):
     tree = dict(name=os.path.basename(path), children=[])
     try: lst = os.listdir(path)
@@ -89,9 +90,49 @@ def grouping(name):
     # print(files)
     return render_template('group.html', target=name, tree=files)
 
-@app.route('/killchain', methods=['GET', 'POST'])
-def killchain():
-    return 'killchain'
+
+def get_group_file(path, file_name):
+    data = None
+
+    try:
+        lst = os.listdir(path)
+    except OSError:
+        pass  # ignore errors
+    else:
+        for name in lst:
+            # print(name)
+            fn = os.path.join(path, name)
+            if os.path.isdir(fn):
+                data = get_group_file(fn, file_name)
+                if data:
+                    return data
+            else:
+                if name == file_name:
+                    with open(fn, 'r') as f:
+                        data = json.loads(f.read())
+
+    return data
+
+@app.route('/get_group_json', methods=['POST'])
+def get_group_json():
+
+    file_name = request.form['file_name']
+
+    if not file_name.endswith('.json'):
+        return False
+
+    path = 'grouping'
+
+    data = get_group_file(path, file_name)
+
+    return jsonify(data)
+
+
+@app.route('/visualize/<file_name>', methods=['GET', 'POST'])
+def visualize(file_name):
+    print(file_name)
+    print('HH')
+    return render_template('visualize.html', stix_json=file_name)
 
 if __name__=='__main__':
 

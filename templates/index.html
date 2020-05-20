@@ -3,115 +3,159 @@
 {% block title %}ADD Demo page{% endblock %}
 
 {% block head %}
-{{super()}}
-<!--<link rel="stylesheet" href="{{url_for('static', filename='/css/json-beauty1.css')}}">-->
-<!--<link rel="stylesheet" href="{{url_for('static', filename='/css/json-beauty2.css')}}">-->
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/ali-nav.css')}}">
+
+    <!--<link rel="stylesheet" href="{{url_for('static', filename='/css/json-beauty1.css')}}">-->
+    <!--<link rel="stylesheet" href="{{url_for('static', filename='/css/json-beauty2.css')}}">-->
 {% endblock %}
 {% block navbar %}
-<div class="navbar navbar-fixed-top">
-    <!-- ... -->
-</div>
+    <div class="navbar navbar-fixed-top">
+        <!-- ... -->
+    </div>
 {% endblock %}
 
 {% block content %}
-<div class="container">
+    <div class="container">
     <h1>Threat Intelligence - Main </h1>
 
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand focus" href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Home_font_awesome.svg/1200px-Home_font_awesome.svg.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            <br>
-            Home
-        </a>
-    </nav>
+    <div class="pkg-nav global-action">
+        <div class="nav-steps">
+            <div class="nav-step nav-step-active nav-step-current">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line left">
+                    <line x1="4" y1="3" x2="100%" y2="3"></line>
+                </svg>
+                <div class="step-content">
+                    <div class="step-icon"><i class="iconfont icon-baoguofahuo-xianxing"></i></div>
+                    <a href="/" class="current-img-icon"><img src="//img.alicdn.com/tps/TB1OU3iOFXXXXc8XFXXXXXXXXXX-90-90.gif" alt="current"></a>
+                    <p><span class="light-desc">Search</span></p>
+                </div>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line right">
+                    <line x1="6" y1="3" x2="100%" y2="3"></line>
+                </svg>
 
-    <!--<ul class="nav nav-tabs">-->
+            </div>
+            <div class="nav-step nav-step-active">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line left">
+                    <line x1="4" y1="3" x2="100%" y2="3"></line>
+                </svg>
+                <div class="step-content">
+                    <div class="step-icon"><i class="iconfont icon-touchengkongyun"></i></div>
+                    <a href="#" class="current-img-icon"><img src="//img.alicdn.com/tps/TB1OU3iOFXXXXc8XFXXXXXXXXXX-90-90.gif" alt="current"></a>
+                    <p><span class="light-desc">Grouping</span></p>
+                </div>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line right">
+                    <line x1="6" y1="3" x2="100%" y2="3"></line>
+                </svg>
+            </div>
+            <div class="nav-step nav-step-active">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="step-dash-line left">
+                    <line x1="4" y1="3" x2="100%" y2="3"></line>
+                </svg>
+                <div class="step-content">
+                    <div class="step-icon"><i class="iconfont icon-weicheng"></i></div>
+                    <a href="#" class="current-img-icon"><img src="//img.alicdn.com/tps/TB1OU3iOFXXXXc8XFXXXXXXXXXX-90-90.gif" alt="current"></a>
+                    <p><span class="light-desc">Visualization</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!--<ul class="nav nav-tabs">-->
         <!--<li role="presentation" class="active"><a href="#">Home</a></li>-->
         <!--<li role="presentation"><a href="#">Grouping</a></li>-->
         <!--<li role="presentation"><a href="#">Visualize</a></li>-->
-    <!--</ul>-->
+        <!--</ul>-->
 
-    <div style="margin-top: 20px;">
+        <div style="margin-top: 20px;">
 
-        <form role="search" action="api" method="POST">
-            <div class="form-group col-xs-12 col-md-4 col-md-offset-4" >
-                <input type="text" id="keyword" name="keyword" class="form-control" placeholder="Keyword">
-                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-            </div>
-            <button id="call-api" type="button" class="btn btn-default" onclick="fnGetObjects()" >Search</button>
-        </form>
+            <form role="search" action="api" method="POST" id="api-form">
+                <div class="form-group col-xs-12 col-md-4 col-md-offset-4" >
+                    <input type="text" id="keyword" name="keyword" class="form-control" placeholder="Keyword">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                </div>
+                <button id="call-api" type="button" class="btn btn-default" onclick="fnGetObjects()">Search</button>
+            </form>
+
+        </div>
+        <br>
+
+        <div id="loading" class="text-center" style="display: none">
+            <img src="/static/loading.gif" alt="" class="rounded" style="width: 30%"/>
+
+            <label for="loading" style="display: block; text-align: center;">Now Loading...</label>
+        </div>
+        <br><br>
+
+        <div>
+            <button onclick="location.href='/group/'+document.getElementById('keyword').value" type="button" class="btn btn-success" style="float: right;" >Grouping</button>
+            <button type="button" class="btn btn-primary" style="float: left;" disabled>Prev</button>
+
+        </div>
+        <br><br>
+        <hr>
+
+        {{wtf.quick_form(form)}}
+        <hr>
+
 
     </div>
-    <br>
-
-    <div id="loading" class="text-center" style="display: none">
-        <img src="/static/loading.gif" alt="" class="rounded" style="width: 30%"/>
-
-        <label for="loading" style="display: block; text-align: center;">Now Loading...</label>
-    </div>
-    <br><br>
-
-    <div>
-        <button onclick="location.href='/group/'+document.getElementById('keyword').value" type="button" class="btn btn-success" style="float: right;" >Grouping</button>
-        <button type="button" class="btn btn-primary" style="float: left;" disabled>Prev</button>
-
-    </div>
-    <br><br>
-    <hr>
-
-    {{wtf.quick_form(form)}}
-    <hr>
-
-
-</div>
 {% endblock %}
 
 {% block scripts %}
-{{ super() }}
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script>
-    function fnGetObjects(){
-        var keyword = $('#keyword').val();
-        var csrf_token = "{{ csrf_token() }}";
-
-        $.ajaxSetup({
-            beforeSend: function(xhr, settings) {
-                if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
-                    xhr.setRequestHeader("X-CSRFToken", csrf_token);
+    {{ super() }}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+        document.getElementById("api-form")
+            .addEventListener("keyup", function(event) {
+                event.preventDefault();
+                {#alert(event.keyCode)#}
+                if (event.keyCode === 13) {
+                    document.getElementById("call-api").click();
                 }
-            }
-        });
+            });
+
+        function fnGetObjects(){
+            var keyword = $('#keyword').val();
+            var csrf_token = "{{ csrf_token() }}";
+
+            $.ajaxSetup({
+                beforeSend: function(xhr, settings) {
+                    if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrf_token);
+                    }
+                }
+            });
 
 
-        $('#loading').show();
-        $.ajax({
+            $('#loading').show();
+            $.ajax({
 
-            type : 'POST',
-            url : 'api',
-            data : {
-                'keyword': keyword
-            },
-            dataType : 'JSON',
+                type : 'POST',
+                url : 'api',
+                data : {
+                    'keyword': keyword
+                },
+                dataType : 'JSON',
 
-            complete: function () {
-                $('#loading').hide()
+                complete: function () {
+                    $('#loading').hide()
 
-            },
-            success : function(result){
-                // $('#result').val(JSON.stringify(result, null, '\t'))
-                $('#result').val(result)
-
-
-                // alert("result = "+ result);
-            },
-
-            error : function(xtr,status,error){
-                alert(xtr +":"+status+":"+error);
-            }
-        });
-    }
+                },
+                success : function(result){
+                    // $('#result').val(JSON.stringify(result, null, '\t'))
+                    $('#result').val(result)
 
 
+                    // alert("result = "+ result);
+                },
 
-</script>
+                error : function(xtr,status,error){
+                    alert(xtr +":"+status+":"+error);
+                }
+            });
+        }
+
+
+
+    </script>
 {% endblock %}
