@@ -295,7 +295,7 @@ def make_group(group_name):
 
     # update for demo will update more fancy.
     with open('./grouping/{0}-bundle.json'.format(group_name), 'w') as f:
-        wf.write(str(Bundle(objects=gb.objects)))
+        f.write(str(Bundle(objects=gb.objects)))
 
 
 
