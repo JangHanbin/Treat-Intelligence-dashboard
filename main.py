@@ -32,22 +32,13 @@ def api():
 
 
     # # if there is data that searched before.
-    if os.path.isfile('./bundles/{0}-bundle.json'.format(keyword)):
-        with open('./bundles/{0}-bundle.json'.format(keyword)) as f:
-
-            # data = json.loads(f.readlines())
-            # print(f.read())
-            # print(data)
-            return jsonify(f.read())
-
-    else:
+    if not os.path.isfile('./bundles/{0}-bundle.json'.format(keyword)):
         make_group(keyword)
 
-        with open('./bundles/{0}-bundle.json'.format(keyword)) as f:
-            data = json.loads(f.read())
+    with open('./bundles/{0}-bundle.json'.format(keyword)) as f:
+        data = f.read()
 
-            print(data)
-            return jsonify(data)
+        return jsonify(data)
 
 
 @app.route('/fonts/<file>', methods=['GET'])
